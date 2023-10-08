@@ -24,14 +24,14 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 ---
 ### Connecting to your vps
  - SSH as root into your vps (Your ssh password can usually be found on your host vps website)
- - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/)
+ - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/) - https://putty.org/
  - In Linux use
 
  		ssh root@ip.address -L 5901:localhost:5901
 
 ---
 ### Setting up Debian
- - Once youre in...Make user and set a Password. "t2server" as whatever username you want
+ - Once youre in...Make user and set a Password. Change `t2server` as whatever username you want
 		adduser t2server
 
 		usermod -aG sudo t2server
@@ -61,7 +61,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 
 		nano ~/.vnc/xstartup
 
- - Copy this inside xstartup, ctrl-o save. This says to start our desktop when we start our vnc
+ - Copy this inside xstartup, `ctrl-o` save. This says to start our desktop when we start our vnc
 
 		#!/bin/bash
 		xrdb $HOME/.Xresources
@@ -82,7 +82,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 		sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 
- - This will install wine-development, typically theres no issues. If you have issues install "winehq-stable".
+ - This will install wine-development, typically theres no issues. If you have issues install `winehq-stable`.
 
 		sudo apt install --install-recommends winehq-devel
 
@@ -100,7 +100,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Start your VNC Server
- - 1800x950 can be whatever you want
+ - Change `1800x950` can be whatever resolution you want
 
 		vncserver -geometry 1800x950
 
@@ -111,7 +111,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Setup T2
- - Install T2 in wine (Installs to /home/t2server/.wine/drive_c/Dynamix)
+ - Install T2 in wine (Typically install to `/home/t2server/.wine/drive_c/Dynamix``)
 
 		wine Tribes2gsi.exe
 
@@ -165,7 +165,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Using a bash script
- - Ideally you can start your server with a bash script ie: sh startserver.sh
+ - Ideally you can start your server with a bash script `ie: sh startserver.sh`
 
 		#!/bin/sh
 		BASEDIR=/home/t2server/.wine/drive_c/Dynamix/Tribes2/GameData/
