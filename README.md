@@ -34,21 +34,28 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 		sudo apt update && sudo apt upgrade
 
+---
 # Log out as root and log back in as t2server or your newly created user. This is very important...
+---
 
  - Install desktop
+
 		sudo apt install xfce4 xfce4-goodies tightvncserver xfonts-base firefox-esr synaptic file-roller git winetricks htop curl zenity
 
  - Start vnc server, make password...8 characters
+
 		vncserver
 
  - Kill vnc server
+
 		vncserver -kill :1
 
  - Open vnc config file
+
 		nano ~/.vnc/xstartup
 
  - Copy this inside xstartup, ctrl-o save. This says to start our desktop when we start our vnc
+
 		#!/bin/bash
 		xrdb $HOME/.Xresources
 		startxfce4 &
