@@ -100,7 +100,7 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Start your VNC Server
- - Change `1800x950` can be whatever resolution you want
+ - Change `1800x950` to be whatever resolution you want
 
 		vncserver -geometry 1800x950
 
