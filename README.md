@@ -128,7 +128,7 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 ---
 
 ### Firewall (Optional)
- - Install IPTables
+ - Install iptables
 
 		sudo apt install iptables iptables-persistent
 
