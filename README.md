@@ -7,10 +7,12 @@
 
 Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
+---
 ### Target Environment
  - This guide is for Debian 12 (Bookworm)
  - This could probably work on other distros varying packages and commands
 
+---
 ### Choosing a host
  - Any VPS host could probably run a t2 server depending on how much you want to pay...
  - Vultr is probably to easiest to use - https://www.vultr.com/
@@ -18,11 +20,15 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
  - GCE (Google Compute Engine) being probably the more difficult option - https://cloud.google.com/compute/
  - I'm sure there's others
 
+---
 ### Connecting to your vps
  - SSH as root into your vps (Your ssh password can usually be found on your host vps website)
  - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/)
- - In Linux use ssh root@ip.address -L 5901:localhost:5901
+ - In Linux use
 
+ 		ssh root@ip.address -L 5901:localhost:5901
+
+---
 ### Setting up Debian
  - Once youre in...Make user and set a Password. "t2server" as whatever username you want
 		adduser t2server
