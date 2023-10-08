@@ -191,6 +191,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
+---
+
 # Success!
 ## If everything is setup correctly, your server should show up on the master server within a few minutes
 Good Luck!
