@@ -33,7 +33,10 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 ### Setting up Debian
  - Once youre in...Make user and set a Password. Change `t2server` as whatever username you want
+
 		adduser t2server
+
+ - Then...
 
 		usermod -aG sudo t2server
 
