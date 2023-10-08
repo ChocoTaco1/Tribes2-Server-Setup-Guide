@@ -203,5 +203,5 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 # Success!
-## If everything is setup correctly, your server should show up on the master server within a few minutes
+## If everything is setup correctly your server should show up on the master server within a few minutes
 Good Luck!
