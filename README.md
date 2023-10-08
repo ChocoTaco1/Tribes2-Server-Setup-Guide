@@ -151,6 +151,7 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
  - "taskset -c 0" is locking the server process to one thread
 
+### Using a bash script
  - Ideally you can start your server with a bash script ie: sh startserver.sh
  - Update the start command with whatever you choose to use with or without loops fix
 
@@ -171,7 +172,6 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 ### Other Things
  - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
  - Adding an ftp server can also help with file management, granted you locked down the ports
- - If everything is setup correctly, your server should show up on the main server within a few minutes
 
  - Higher Priorty: To allow your user to set a higher priority use...
 
@@ -184,3 +184,7 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
  - New startup would be something with "nice -n -5" added...
 
 		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
+
+# Success!
+## If everything is setup correctly, your server should show up on the main server within a few minutes
+## Good Luck!
