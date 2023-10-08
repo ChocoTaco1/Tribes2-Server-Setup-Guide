@@ -161,7 +161,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 		taskset -c 0 wine wine_injector.exe Server.dll Tribes2.exe 28000 -dedicated -mod Classic
 
- - "taskset -c 0" is locking the server process to one thread
+ - `taskset -c 0` is locking the server process to one cpu only
 
 ---
 
