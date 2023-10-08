@@ -65,7 +65,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 		nano ~/.vnc/xstartup
 
- - Copy this inside xstartup, `ctrl-o` save. This says to start our desktop when we start our vnc
+ - Copy this inside xstartup, `ctrl-o` save, `ctrl-x` to exit. This says to start our desktop when we start our vnc
 
 		#!/bin/bash
 		xrdb $HOME/.Xresources
