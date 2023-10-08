@@ -125,6 +125,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
  - Extract Tacomaps to Classic/maps/
  - Extract msvcrt-ruby190 to Gamedata (Overwriting any existing files)
  - Extract Perf Counter to Classic/scripts/autoexec (This locks server to HighPerformanceCounter=0)
+---
 
  - Optional: Download Loops sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
 
