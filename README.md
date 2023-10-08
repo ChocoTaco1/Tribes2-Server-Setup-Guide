@@ -115,7 +115,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Setup T2
- - Install T2 in wine (Typically install to `/home/t2server/.wine/drive_c/Dynamix``)
+ - Install T2 in wine (Typically installs to `/home/t2server/.wine/drive_c/Dynamix``)
 
 		wine Tribes2gsi.exe
 
