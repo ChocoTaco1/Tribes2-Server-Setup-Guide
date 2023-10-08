@@ -143,11 +143,11 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 ---
 
 ### Starting the Server
- - Start t2 server (without loops fix)
+ - Start t2 server (without loop's fix)
 
 		taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
- - Start t2 server (with loops fix)
+ - Start t2 server (with loop's fix)
 
 		taskset -c 0 wine wine_injector.exe Server.dll Tribes2.exe 28000 -dedicated -mod Classic
 
