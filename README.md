@@ -60,56 +60,85 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 		xrdb $HOME/.Xresources
 		startxfce4 &
 
-//Repair permissions
-sudo chmod +x ~/.vnc/xstartup
+ - Repair permissions
 
-//Installing WINE
-//Install the wine repo from: https://wiki.winehq.org/Debian
-sudo dpkg --add-architecture i386
-sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
-//This install wine-development, typically theres no issues. If you have issues install "winehq-stable".
-sudo apt install --install-recommends winehq-devel
+		sudo chmod +x ~/.vnc/xstartup
 
-//Get files
-wget https://www.the-construct.net/downloads/tribes2/tribes2gsi.exe &&
-wget https://www.tribesnext.com/files/TribesNext_rc2a.exe &&
-wget https://tribes2stats.com/files/mods/classic_v152.zip &&
-git clone https://github.com/ChocoTaco1/TacoServer &&
-git clone https://github.com/ChocoTaco1/TacoMaps &&
-wget https://www.dropbox.com/s/bvh9631a4mtuisf/msvcrt-ruby190.zip &&
-wget https://www.dropbox.com/s/tt4utbqkzh791y8/SetPerfCounter.zip
+---
 
-//Start our VNC Server (1800x950 can be whatever you want)
-vncserver -geometry 1800x950
-//VNC into server (In windows use real vnc/In linux use Reminna). Setup to use localhost:5901 while youre logged into the server using ssh. Enter your 8 character vnc password
-//You should be greeted with a Debian desktop
+### Installing WINE
+- Install the wine repo by following the directions here: https://wiki.winehq.org/Debian
 
-//Install T2 in wine (Installs to /home/t2server/.wine/drive_c/Dynamix)
-wine Tribes2gsi.exe
-//Install Tribesnext_rc2a
-wine TribesNext_rc2a.exe
-//Update Classic to 1.5.2 (1.0 is included in Tribes2gsi) Just delete classic folder in Gamedata and extract classic 1.5.2 there
-//Extract TacoServer to Classic (Overwriting any existing files)
-//Extract Tacomaps to Classic/maps/
-//Extract msvcrt-ruby190 to Gamedata (Overwriting any existing files)
-//Extract Perf Counter to Classic/scripts/autoexec (This locks server to HighPerformanceCounter=0)
 
-//Optional: Download Loops sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
-wget https://cdn.discordapp.com/attachments/1154920105097040023/1154923875562422382/t2-auth-faster.zip?ex=6518b0ad&is=65175f2d&hm=5be90f772b1c0a0046331ffce8350a9c686ba242dcaa7a2350ebd433798f81cc&
-//This requires vcrun22 to work so...
-winetricks -q --force vcrun2022
+		sudo dpkg --add-architecture i386
+		sudo mkdir -pm755 /etc/apt/keyrings
+		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+		sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 
-//Firewall (Optional)
-//Install IPTables
-sudo apt install iptables iptables-persistent
-//Make sure ports are open
-sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
-sudo iptables -I INPUT -p udp --dport 80 -j ACCEPT
-sudo iptables -I INPUT -p tcp --dport 28000 -j ACCEPT
-sudo iptables -I INPUT -p udp --dport 28000 -j ACCEPT
-//Also make sure ports are open within the host service youre using with their firewall. Make sure to open port 22 for your ssh port as well.
+ - This install wine-development, typically theres no issues. If you have issues install "winehq-stable".
+
+		sudo apt install --install-recommends winehq-devel
+
+### Get all the files
+
+		wget https://www.the-construct.net/downloads/tribes2/tribes2gsi.exe &&
+		wget https://www.tribesnext.com/files/TribesNext_rc2a.exe &&
+		wget https://tribes2stats.com/files/mods/classic_v152.zip &&
+		git clone https://github.com/ChocoTaco1/TacoServer &&
+		git clone https://github.com/ChocoTaco1/TacoMaps &&
+		wget https://www.dropbox.com/s/bvh9631a4mtuisf/msvcrt-ruby190.zip &&
+		wget https://www.dropbox.com/s/tt4utbqkzh791y8/SetPerfCounter.zip
+
+---
+
+### Start our VNC Server
+ - 1800x950 can be whatever you want
+
+		vncserver -geometry 1800x950
+
+ - VNC into server (In windows use real vnc/In linux use Reminna). Setup to use localhost:5901 while youre logged into the server using ssh. Enter your 8 character vnc password
+ - You should be greeted with a Debian desktop
+
+---
+
+### Setup T2
+ - Install T2 in wine (Installs to /home/t2server/.wine/drive_c/Dynamix)
+
+		wine Tribes2gsi.exe
+
+ - Install Tribesnext_rc2a
+
+		wine TribesNext_rc2a.exe
+
+ - Update Classic to 1.5.2 (1.0 is included in Tribes2gsi) Just delete classic folder in Gamedata and extract classic 1.5.2 there
+ - Extract TacoServer to Classic (Overwriting any existing files)
+ - Extract Tacomaps to Classic/maps/
+ - Extract msvcrt-ruby190 to Gamedata (Overwriting any existing files)
+ - Extract Perf Counter to Classic/scripts/autoexec (This locks server to HighPerformanceCounter=0)
+
+ - Optional: Download Loops sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
+
+		wget https://cdn.discordapp.com/attachments/1154920105097040023/1154923875562422382/t2-auth-faster.zip?ex=6518b0ad&is=65175f2d&hm=5be90f772b1c0a0046331ffce8350a9c686ba242dcaa7a2350ebd433798f81cc&
+
+ - This requires vcrun22 to work so...
+
+		winetricks -q --force vcrun2022
+
+---
+
+### Firewall (Optional)
+ - Install IPTables
+
+		sudo apt install iptables iptables-persistent
+
+ - Make sure iptable ports are open
+
+		sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT
+		sudo iptables -I INPUT -p udp --dport 80 -j ACCEPT
+		sudo iptables -I INPUT -p tcp --dport 28000 -j ACCEPT
+		sudo iptables -I INPUT -p udp --dport 28000 -j ACCEPT
+
+- Also make sure ports are open within the host service youre using with their firewall. Make sure to open port 22 for your ssh port as well.
 
 //Start t2 server (without loops fix)
 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
