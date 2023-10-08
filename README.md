@@ -180,11 +180,9 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
  - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
  - Adding an ftp server can also help with file management, granted you locked down the ports
 
- - Higher Priorty: To allow your user to set a higher priority use...
+ - Higher Priorty: To allow your user to set a higher priority use add at the end of...
 
 		sudo nano /etc/security/limits.conf
-
- - At the end add
 
 		@t2server        -          nice          -20
 
