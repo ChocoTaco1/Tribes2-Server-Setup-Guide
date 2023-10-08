@@ -18,7 +18,7 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
  - GCE (Google Compute Engine) being probably the more difficult option - https://cloud.google.com/compute/
  - I'm sure there's others
 
-### Connecting...
+### Connecting to your vps
  - SSH as root into your vps (Your ssh password can usually be found on your host vps website)
  - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/)
  - In Linux use ssh root@ip.address -L 5901:localhost:5901
@@ -75,7 +75,7 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 		sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 
- - This install wine-development, typically theres no issues. If you have issues install "winehq-stable".
+ - This will install wine-development, typically theres no issues. If you have issues install "winehq-stable".
 
 		sudo apt install --install-recommends winehq-devel
 
@@ -140,36 +140,47 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 - Also make sure ports are open within the host service youre using with their firewall. Make sure to open port 22 for your ssh port as well.
 
-//Start t2 server (without loops fix)
-taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
-//Start t2 server (with loops fix)
-taskset -c 0 wine wine_injector.exe Server.dll Tribes2.exe 28000 -dedicated -mod Classic
-//"taskset -c 0" is locking the server process to one thread
+### Starting the Server
+ - Start t2 server (without loops fix)
 
-//Ideally you can start your server with a bash script ie: sh startserver.sh
-//Update the start command with whatever you choose to use with or without loops fix
-#!/bin/sh
-BASEDIR=/home/t2server/.wine/drive_c/Dynamix/Tribes2/GameData/
-cd ${BASEDIR}
+		taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
-while true; do
-	echo "Waiting 30 seconds for all wine processes to close..."
-    sleep 30
-    wineserver -k9 && killall wine && kill $(lsof -t -i:28000) && kill $(lsof -t -i:80) && killall winedevice.exe
-	echo "Removing dsos..."
-    find ${BASEDIR} -name \*.dso -execdir /bin/rm {} \;
-	echo "Starting Tribes2 server..."
-    WINEDEBUG=-all,-fixme taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
-done
+ - Start t2 server (with loops fix)
 
-//For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
-//Adding an ftp server can also help with file management, granted you locked down the ports
-//If everything is setup correctly, your server should show up on the main server within a few minutes
+		taskset -c 0 wine wine_injector.exe Server.dll Tribes2.exe 28000 -dedicated -mod Classic
 
-//Other things that can be done...
-//Higher Priorty: To allow your user to set a higher priority use...
-sudo nano /etc/security/limits.conf
-//At the end add
-@t2server        -          nice          -20
-//New startup would be something with "nice -n -5" added...
-//nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
+ - "taskset -c 0" is locking the server process to one thread
+
+ - Ideally you can start your server with a bash script ie: sh startserver.sh
+ - Update the start command with whatever you choose to use with or without loops fix
+
+		#!/bin/sh
+		BASEDIR=/home/t2server/.wine/drive_c/Dynamix/Tribes2/GameData/
+		cd ${BASEDIR}
+
+		while true; do
+			echo "Waiting 30 seconds for all wine processes to close..."
+			sleep 30
+			wineserver -k9 && killall wine && kill $(lsof -t -i:28000) && kill $(lsof -t -i:80) && killall winedevice.exe
+			echo "Removing dsos..."
+			find ${BASEDIR} -name \*.dso -execdir /bin/rm {} \;
+			echo "Starting Tribes2 server..."
+			WINEDEBUG=-all,-fixme taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
+		done
+
+### Other Things
+ - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
+ - Adding an ftp server can also help with file management, granted you locked down the ports
+ - If everything is setup correctly, your server should show up on the main server within a few minutes
+
+ - Higher Priorty: To allow your user to set a higher priority use...
+
+		sudo nano /etc/security/limits.conf
+
+ - At the end add
+
+		@t2server        -          nice          -20
+
+ - New startup would be something with "nice -n -5" added...
+
+		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
