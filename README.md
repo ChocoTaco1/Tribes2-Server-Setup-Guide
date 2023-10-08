@@ -140,6 +140,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 - Also make sure ports are open within the host service youre using with their firewall. Make sure to open port 22 for your ssh port as well.
 
+---
+
 ### Starting the Server
  - Start t2 server (without loops fix)
 
@@ -150,6 +152,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 		taskset -c 0 wine wine_injector.exe Server.dll Tribes2.exe 28000 -dedicated -mod Classic
 
  - "taskset -c 0" is locking the server process to one thread
+
+---
 
 ### Using a bash script
  - Ideally you can start your server with a bash script ie: sh startserver.sh
@@ -169,6 +173,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 			WINEDEBUG=-all,-fixme taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 		done
 
+---
+
 ### Other Things
  - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
  - Adding an ftp server can also help with file management, granted you locked down the ports
@@ -186,5 +192,5 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
 # Success!
-## If everything is setup correctly, your server should show up on the main server within a few minutes
-## Good Luck!
+## If everything is setup correctly, your server should show up on the master server within a few minutes
+Good Luck!
