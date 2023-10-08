@@ -182,7 +182,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 			WINEDEBUG=-all,-fixme taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 		done
 
- - Update the start command with whatever you choose to use with or without loops fix
+ - Update the start command with whatever you choose to use regarding loop's fix
 
 ---
 
