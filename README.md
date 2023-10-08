@@ -158,7 +158,6 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 ### Using a bash script
  - Ideally you can start your server with a bash script ie: sh startserver.sh
- - Update the start command with whatever you choose to use with or without loops fix
 
 		#!/bin/sh
 		BASEDIR=/home/t2server/.wine/drive_c/Dynamix/Tribes2/GameData/
@@ -173,6 +172,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 			echo "Starting Tribes2 server..."
 			WINEDEBUG=-all,-fixme taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 		done
+
+ - Update the start command with whatever you choose to use with or without loops fix
 
 ---
 
