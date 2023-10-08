@@ -24,7 +24,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 ### Connecting to your vps
- - SSH as root into your vps (Your ssh password can usually be found on your host vps website)
+ - SSH as root into your vps (Your root password can usually be found on your host vps website)
  - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/) - https://putty.org/
  - In Linux use
 
