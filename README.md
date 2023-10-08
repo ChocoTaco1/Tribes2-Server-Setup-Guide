@@ -196,7 +196,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 		@t2server        -          nice          -20
 
- - New startup would be something with "nice -n -5" added...
+ - New startup would be something with `nice -n -5` added...
 
 		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
