@@ -80,7 +80,8 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 		sudo apt install --install-recommends winehq-devel
 
 ### Get all the files
- - Download
+ - Download:
+
 		wget https://www.the-construct.net/downloads/tribes2/tribes2gsi.exe &&
 		wget https://www.tribesnext.com/files/TribesNext_rc2a.exe &&
 		wget https://tribes2stats.com/files/mods/classic_v152.zip &&
