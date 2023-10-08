@@ -1,6 +1,6 @@
-![Tribes2 Server Setup Guide](https://cdn.discordapp.com/attachments/521797012014759970/678460505597149214/TacoServer.png)
+![Tribes 2 Server Setup Guide](https://cdn.discordapp.com/attachments/521797012014759970/678460505597149214/TacoServer.png)
 
-# Tribes2 Server Setup Guide by ChocoTaco
+# Tribes 2 Server Setup Guide by ChocoTaco
 ## A guide for setting up a Tribes 2 server via vps, ssh, and vnc
 
 ---
