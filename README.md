@@ -99,13 +99,14 @@ Tacoserver: [Tacoserver](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 
-### Start our VNC Server
+### Start your VNC Server
  - 1800x950 can be whatever you want
 
 		vncserver -geometry 1800x950
 
- - VNC into server (In windows use real vnc/In linux use Reminna). Setup to use localhost:5901 while youre logged into the server using ssh. Enter your 8 character vnc password
- - You should be greeted with a Debian desktop
+ - Use Real VNC for windows - https://www.realvnc.com/en/
+ - Use Reminna for linux - https://remmina.org/
+ - Setup to use `localhost:5901` while youre logged into the server using ssh. Enter your 8 character vnc password. You should be greeted with a Debian desktop.
 
 ---
 
