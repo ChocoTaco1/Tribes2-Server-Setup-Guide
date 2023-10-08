@@ -127,11 +127,11 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
  - Extract Perf Counter to Classic/scripts/autoexec (This locks server to HighPerformanceCounter=0)
 ---
 
- - Optional: Download Loops sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
+ - Optional: Download Loop's sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
 
 		wget https://cdn.discordapp.com/attachments/1154920105097040023/1154923875562422382/t2-auth-faster.zip?ex=6518b0ad&is=65175f2d&hm=5be90f772b1c0a0046331ffce8350a9c686ba242dcaa7a2350ebd433798f81cc&
 
- - This requires vcrun22 to work so...
+ - Loop's fix requires vcrun22 to work...
 
 		winetricks -q --force vcrun2022
 
