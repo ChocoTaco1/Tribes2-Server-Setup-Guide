@@ -40,9 +40,12 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 		usermod -aG sudo t2server
 
- - This is for winetricks later and update packages
+ - This is for winetricks later
 
 		echo "deb http://deb.debian.org/debian bookworm contrib" > /etc/apt/sources.list
+
+ - Update packages
+
 		sudo apt update && sudo apt upgrade
 
 ---
