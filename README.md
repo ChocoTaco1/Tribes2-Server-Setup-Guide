@@ -8,15 +8,15 @@
 Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
 
 ### Target Environment
- - This is for guide is for Debian 12 (Bookworm)
+ - This guide is for Debian 12 (Bookworm)
  - This could probably work on other distros varying packages and commands
 
 ### Choosing a host
  - Any VPS host could probably run a t2 server depending on how much you want to pay...
  - Vultr is probably to easiest to use - https://www.vultr.com/
  - Linode probably a great option too (Now Akamai) - https://www.linode.com/
- - GCE (Google Compute Engine) being probably the more difficult option  https://cloud.google.com/compute/
-   I'm sure there's others
+ - GCE (Google Compute Engine) being probably the more difficult option - https://cloud.google.com/compute/
+ - I'm sure there's others
 
 ### Connecting...
  - SSH as root into your vps (Your ssh password can usually be found on your host vps website)
@@ -32,27 +32,26 @@ Discord: [Tribes 2 Discord](https://discord.gg/Y4muNvF)
  - This is for winetricks later
 		echo "deb http://deb.debian.org/debian bookworm contrib" > /etc/apt/sources.list
 
-sudo apt update && sudo apt upgrade
+		sudo apt update && sudo apt upgrade
 
-//****Log out as root and log back in as t2server or your newly created user. This is very important...****
+# Log out as root and log back in as t2server or your newly created user. This is very important...
 
-//Install desktop
-sudo apt install xfce4 xfce4-goodies tightvncserver xfonts-base firefox-esr synaptic file-roller git winetricks htop curl zenity
+ - Install desktop
+		sudo apt install xfce4 xfce4-goodies tightvncserver xfonts-base firefox-esr synaptic file-roller git winetricks htop curl zenity
 
-//Start vnc server, make password...8 characters
-vncserver
+ - Start vnc server, make password...8 characters
+		vncserver
 
-//Kill vnc server
-vncserver -kill :1
+ - Kill vnc server
+		vncserver -kill :1
 
-//Open vnc config file
-nano ~/.vnc/xstartup
+ - Open vnc config file
+		nano ~/.vnc/xstartup
 
-//Copy this inside xstartup, ctrl-o save
-//This says to start our desktop when we start our vnc
-#!/bin/bash
-xrdb $HOME/.Xresources
-startxfce4 &
+ - Copy this inside xstartup, ctrl-o save. This says to start our desktop when we start our vnc
+		#!/bin/bash
+		xrdb $HOME/.Xresources
+		startxfce4 &
 
 //Repair permissions
 sudo chmod +x ~/.vnc/xstartup
