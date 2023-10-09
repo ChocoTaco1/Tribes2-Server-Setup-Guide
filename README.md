@@ -25,7 +25,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 ### Connecting to your vps
  - SSH as root into your vps (Your root password can usually be found on your host vps website)
- - In windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/) - https://putty.org/
+ - In Windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/) - https://putty.org/      Another method for Windows: https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/
  - In Linux use
 
  		ssh root@ip.address -L 5901:localhost:5901
@@ -50,6 +50,9 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 # Log out as root and log back in as t2server or your newly created user. This is very important...
+
+        ssh t2server@ip.address -L 5901:localhost:5901
+
 ---
 
  - Install desktop
