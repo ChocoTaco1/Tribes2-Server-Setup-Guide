@@ -50,9 +50,6 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 # Log out as root and log back in as t2server or your newly created user. This is very important...
-
-        ssh t2server@ip.address -L 5901:localhost:5901
-
 ---
 
  - Install desktop
