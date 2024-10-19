@@ -80,9 +80,9 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 - Install the wine repo by following the directions here: https://wiki.winehq.org/Debian
 
 
-		sudo dpkg --add-architecture i386
-		sudo mkdir -pm755 /etc/apt/keyrings
-		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+		sudo dpkg --add-architecture i386 &&
+		sudo mkdir -pm755 /etc/apt/keyrings &&
+		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key &&
 		sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 
  - This will install wine-development, typically theres no issues. If you have issues install `winehq-stable`.
