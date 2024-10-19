@@ -86,9 +86,11 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 		sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key &&
 		sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
 
- - This will install wine-development, typically theres no issues. If you have issues install `winehq-stable`.
+ - This will install wine-development, typically theres no issues.
 
-		sudo apt install --install-recommends winehq-devel
+		sudo apt install --install-recommends winehq-stable
+
+ - If you want the development branch install `winehq-devel`
 
 ### Get all the files
  - Download:
