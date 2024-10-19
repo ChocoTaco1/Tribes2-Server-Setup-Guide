@@ -195,9 +195,9 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Other Things
- - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
+ - For security you can use an ssh key to login
 
- - Make sure to use Vultr Firewall of something to lock down all ports except 80, 28000, and 22 (ssh)
+ - Make sure to use Vultr Firewall or something to lock down all ports except 80, 28000, and 22 (ssh)
 
  - Adding an ftp server can also help with file management, granted you locked down the ports
 
