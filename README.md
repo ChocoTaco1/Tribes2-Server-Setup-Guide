@@ -24,8 +24,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 ### Connecting to your vps
- - SSH as root into your vps (Your root password can usually be found on your host vps website): https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/
- - In Windows use puTTy (ssh tunneling for vnc: https://helpdeskgeek.com/how-to/tunnel-vnc-over-ssh/)
+ - SSH as root into your vps (Your root password can usually be found on your host vps website): https://www.linode.com/docs/guides/connect-to-server-over-ssh-on-windows/
  - In Linux use
 
  		ssh root@ip.address -L 5901:localhost:5901
@@ -118,7 +117,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ---
 
 ### Setup T2
- - Install T2 in wine (Typically installs to `/home/t2server/.wine/drive_c/Dynamix`)
+ - Install T2 in wine (Typically installs to `/home/t2server/.wine/drive_c/Dynamix`).
 
 		wine Tribes2gsi.exe
 
