@@ -188,10 +188,17 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
  - Update the start command with whatever you choose to use regarding loop's fix
 
+ - You can create a shortcut to this start server script by right-clicking on the desktop and choosing create a launcher
+
+		sh /home/t2server/startserver.sh
+
 ---
 
 ### Other Things
  - For security you can use an ssh key to login, lockdown ssh thru firewall, lock ssh to your home ip, and move ssh ports around
+
+ - Make sure to use Vultr Firewall of something to lock down all ports except 80, 28000, and 22 (ssh)
+
  - Adding an ftp server can also help with file management, granted you locked down the ports
 
  - Higher Priorty: To allow your user to set a higher priority use add at the end of...
