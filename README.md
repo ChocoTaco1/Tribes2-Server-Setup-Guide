@@ -134,7 +134,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
  - Optional: Download Loop's sha1 fix (Extract Server.dll and wine-injector to GameData Folder, put t2csri_serverside_looped.cs in Gamedata/Classic/scripts/autoexec)
 
-		wget https://www.dropbox.com/scl/fi/gu5eixt8q078fnweahov3/t2-auth-faster.zip
+		wget https://www.dropbox.com/scl/fi/gu5eixt8q078fnweahov3/t2-auth-faster.zip?rlkey=gy4u4789ylfhvr1iqi2zp30bz&st=ka7s1r74
 
  - Loop's fix requires vcrun22 to work...
 
@@ -192,7 +192,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
  - You can create a shortcut to this start server script by right-clicking on the desktop and choosing create a launcher
 
-		sh /home/t2server/startserver.sh
+		Name: Start Server | Command: sh /home/t2server/startserver.sh | Click "Start in Terminal"
 
 ---
 
