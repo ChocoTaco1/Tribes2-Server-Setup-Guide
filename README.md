@@ -64,7 +64,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 		nano ~/.vnc/xstartup
 
- - Copy this inside xstartup, `ctrl-o` save, `ctrl-x` to exit. This says to start our desktop when we start our vnc
+ - Copy this inside xstartup at the end, `ctrl-o` save, `ctrl-x` to exit. This says to start our desktop when we start our vnc
 
 		#!/bin/bash
 		xrdb $HOME/.Xresources
@@ -203,13 +203,13 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
  - Adding an ftp server can also help with file management, granted you locked down the ports
 
- - Higher Priorty: To allow your user to set a higher priority use add at the end of...
+ - Higher Priorty: To allow your user to set a higher priority use add at the end of... (I wouldnt recommend this on shared cpus)
 
 		sudo nano /etc/security/limits.conf
 
 		@t2server        -          nice          -20
 
- - New startup would be something with `nice -n -5` added...
+	New startup would be something with `nice -n -5` added...
 
 		nice -n -5 taskset -c 0 wineconsole Tribes2.exe -dedicated -mod Classic
 
