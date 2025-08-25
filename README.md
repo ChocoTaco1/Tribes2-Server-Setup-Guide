@@ -245,7 +245,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
   - Loadingscreen Safeguards:
 
 		To ensure clients dont get stuck on the loading screen these changes need to be made
-		`https://github.com/ChocoTaco1/TacoServer/commit/7cd1cb8815e19990ab5a0cf632aedc82726333ed`
+		https://github.com/ChocoTaco1/TacoServer/commit/7cd1cb8815e19990ab5a0cf632aedc82726333ed
 
 ---
 ---
