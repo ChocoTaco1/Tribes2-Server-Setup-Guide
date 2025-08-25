@@ -248,7 +248,6 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 		https://github.com/ChocoTaco1/TacoServer/commit/7cd1cb8815e19990ab5a0cf632aedc82726333ed
 
 ---
----
 
 # Success!
 ## If everything is setup correctly your server should show up on the master server within a few minutes
