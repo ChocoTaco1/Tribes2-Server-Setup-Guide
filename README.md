@@ -218,7 +218,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 ### Post Preview Patch
   - Updating a server to the newly released preview:
 
-		`https://tribesnext.com/forum/discussion/4430/preview-qol-fixes-update`
+		Visit Thread: https://tribesnext.com/forum/discussion/4430/preview-qol-fixes-update
 		Back up your server T2 folder
 		Download the latest release
 		Use wine `TribesNEXT_XXXXXXXXX_preview.exe` to initiate the installer for wine, windows just execute the exe
