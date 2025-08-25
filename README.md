@@ -230,7 +230,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 	- To take advantage of extra bandwidth set,
 
 		$pref::Net::PacketRateToClient = 64;
-		$pref::Net::PacketSize = 1000; 
+		$pref::Net::PacketSize = 1000;
 
 
 	- To prevent the new UE box from popping up set,
@@ -244,7 +244,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 
 	- Loadingscreen Safeguards:
-	
+
 		To ensure clients dont get stuck on the loading screen these changes need to be made
 		https://github.com/ChocoTaco1/TacoServer/commit/7cd1cb8815e19990ab5a0cf632aedc82726333ed
 
