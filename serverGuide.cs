@@ -214,6 +214,35 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
 ---
 
+### Post Preview Patch
+Updating a server to the newly released preview:
+https://tribesnext.com/forum/discussion/4430/preview-qol-fixes-update
+
+Back up your server T2 folder
+Download the latest release
+Use wine `TribesNEXT_XXXXXXXXX_preview.exe` to initiate the installer for wine, windows just execute the exe
+Install to your server T2 GameData folder
+If you're using Loops fix or anything like that, remove it from the launch parameters
+
+To take advantage of extra bandwidth set,
+	$pref::Net::PacketRateToClient = 64;
+	$pref::Net::PacketSize = 1000; 
+
+
+To prevent the new UE box from popping up set,
+	$pref::Engine::ExitOnException = true;
+
+
+If you don't want the linux icon showing up use
+	$Host::Linux = 0;
+
+
+Loadingscreen Safeguards:
+To ensure clients dont get stuck on the loading screen these changes need to be made
+https://github.com/ChocoTaco1/TacoServer/commit/7cd1cb8815e19990ab5a0cf632aedc82726333ed
+
+---
+
 # Success!
 ## If everything is setup correctly your server should show up on the master server within a few minutes
 Good Luck!
