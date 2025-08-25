@@ -221,7 +221,8 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 		Visit Thread: https://tribesnext.com/forum/discussion/4430/preview-qol-fixes-update
 		Back up your server T2 folder
 		Download the latest release
-		Use wine `TribesNEXT_XXXXXXXXX_preview.exe` to initiate the installer for wine, windows just execute the exe
+		Use wine `TribesNEXT_XXXXXXXXX_preview.exe` to initiate the installer for wine
+		Or in windows execute the exe
 		Install to your server T2 GameData folder
 		If you're using Loops fix or anything like that, remove it from the launch parameters
 
