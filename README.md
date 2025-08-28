@@ -224,7 +224,7 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 		Use wine `TribesNEXT_XXXXXXXXX_preview.exe` to initiate the installer for wine
 		Or in windows execute the exe
 		Install to your server T2 GameData folder
-		If you're using Loops fix or anything like that, remove it from the launch parameters
+		If you're using Loops fix or anything like that, remove it from the launch parameters and t2csri_serverside_looped.cs from autoexec
 
   - To take advantage of extra bandwidth set,
 
