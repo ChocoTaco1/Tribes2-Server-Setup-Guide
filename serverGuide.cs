@@ -227,8 +227,8 @@ Tacoserver: [Tacoserver Github](https://github.com/ChocoTaco1/TacoServer)
 
   - To take advantage of extra bandwidth set,
 
-		$pref::Net::PacketRateToClient = 64;
-		$pref::Net::PacketSize = 1000;
+		$pref::Net::PacketRateToClient = "64";
+		$pref::Net::PacketSize = "1000"; 
 
 
   - To prevent the new UE box from popping up set,
